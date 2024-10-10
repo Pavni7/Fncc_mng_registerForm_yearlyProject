@@ -1,0 +1,178 @@
+.form-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1;
+}
+
+/* Header and Paragraph Styles */
+h2 {
+  color: #333;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+p {
+  text-align: center;
+}
+
+/* Form Styles */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Adjustments for form rows */
+.row {
+  display: flex;
+  gap: 10px;
+}
+
+/* Neon Input and Textarea Styles */
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(124, 102, 189, 0.5);
+  background-color: #f7f7f7;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #7c66bd;
+  box-shadow: 0 0 10px #7c66bd, 0 0 20px #7c66bd, 0 0 30px rgba(124, 102, 189, 0.5);
+  outline: none;
+}
+
+/* Button Styles with Neon Effect */
+button {
+  background-color: #7c66bd;
+  color: white;
+  padding: 10px;
+  border: none;
+  font-size: 1.1em;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0 0 15px #7c66bd, 0 0 25px rgba(124, 102, 189, 0.7);
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color:#7c66bd;
+  box-shadow: 0 0 20px #a568cb, 0 0 30px rgba(124, 102, 189, 0.8), 0 0 40px #a568cb;
+}
+
+/* Neon effect for the select (dropdown) */
+.form-group select {
+  padding: 8px 12px;
+  border-radius: 5px;
+  background-color: #7c66bd;
+  border: 1px solid #ccc;
+  font-size: 1em;
+  color: white;
+  box-shadow: 0 0 5px rgba(124, 102, 189, 0.5);
+  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.form-group select:hover,
+.form-group select:focus {
+  background-color: #a568cb;
+  border-color: #7c66bd;
+  box-shadow: 0 0 10px #7c66bd, 0 0 20px rgba(124, 102, 189, 0.8), 0 0 30px #7c66bd;
+}
+
+/* Link Styles */
+a {
+  color: #8558b5;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #a568cb;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  /* Ensure form rows stack vertically */
+  .row {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* Adjust the width of the container on mobile */
+  .form-container {
+    max-width: 100%;
+    margin: 20px;
+  }
+
+  /* Input and Button full width on mobile */
+  input,
+  textarea,
+  button,
+  select {
+    width: 100%;
+  }
+}
+
+/* Tablet and smaller laptop styles */
+@media (min-width: 769px) and (max-width: 1200px) {
+  .form-container {
+    max-width: 80%; /* Slightly narrower for medium screens */
+  }
+}
+
+/* Container for the form group */
+.form-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;  /* Space between label and dropdown */
+  width: 100%;
+}
+
+.form-group label {
+  font-size: 1.1em;
+  color: #7c66bd;
+  white-space: nowrap; /* Prevent label from wrapping */
+  margin-right: 10px;
+  text-shadow: 0 0 5px rgba(124, 102, 189, 0.5);
+}
+
+.form-group select {
+  width: 100%;
+  max-width: 250px; /* You can control the width of the dropdown */
+  padding: 8px 12px;
+  border-radius: 5px;
+}
+
+/* Register Button Styles */
+button.register {
+  background-color: #7c66bd; /* Same color as the User dropdown */
+  color: white;
+  padding: 10px;
+  border: none;
+  font-size: 1.1em;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: none; /* Remove the glow effect */
+  opacity: 0.1; /* Lower opacity for dimmed effect */
+  transition: all 0.5s ease-in-out;
+}
+
+button.register:hover {
+  background-color:#7c66bd; /* Slightly lighter on hover */
+  opacity: 0; /* Brighten it up when hovered */
+}
+
